@@ -34,7 +34,7 @@ Management Interface DHCP Server IP Address: 10.0.128.1
 Virtual Gateway IP Address: 192.0.2.1
 Mobility/RF Group Name: default
 
-Network Name (SSID): staff-WiFi
+Network Name (SSID): staff-WiFi | student-WiFi | employee-WiFi | guest-WiFi
 Configure DHCP Bridging Mode [yes][NO]: no
 Allow Static IP Addresses [YES][no]: yes
 Configure a RADIUS Server now? [YES][no]: no
