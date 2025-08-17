@@ -52,6 +52,9 @@ Would you like to configure IPv6 parameters [YES][no]: no
 
 Configuration correct? If yes, system will save it and reset. [yes][NO]: yes
 
-Browser -> httрs://10.0.128.251
+User: admin
+Password: admin@123
+Cisco Controller> show interface summmary
 
+Browser -> httрs://10.0.128.251
 ```
