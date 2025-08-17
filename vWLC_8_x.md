@@ -57,4 +57,9 @@ Password: admin@123
 Cisco Controller> show interface summmary
 
 Browser -> httрs://10.0.128.251
+Browser -> https://public_ip_address:25143/
 ```
+
+## References
+
+1) [Установка контроллера беспроводной сети Cisco vWLC 8.3](https://wiki.dno-it.ru/2023/12/04/ustanovka-cisco-vwlc-versii-8-3/)
