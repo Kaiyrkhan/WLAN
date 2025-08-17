@@ -63,5 +63,7 @@ Browser -> https://public_ip_address:25143/
 ```
 
 ## References
-
 1) [Установка контроллера беспроводной сети Cisco vWLC 8.3](https://wiki.dno-it.ru/2023/12/04/ustanovka-cisco-vwlc-versii-8-3/)
+
+## YouTube
+1) [Cisco Access Point to Controller | AP Joining With vWLC](https://youtu.be/0xSkUGwonHk)
