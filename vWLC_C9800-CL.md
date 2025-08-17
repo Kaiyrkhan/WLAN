@@ -81,7 +81,7 @@ show ap uptime
 show wlan summary
 ```
 
-**Web UI**
+**Configure vWLC using Web UI**
 
 Browser -> https://public_ip_address:44128
 
