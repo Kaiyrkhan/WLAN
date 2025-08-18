@@ -188,7 +188,7 @@ General ->
 - Status: Enabled
 - 6 GHz Status: Disabled
 
-Security -> Layer2 -> Auth Key Mgmt (AKM) -> PSK -> Pre-Shared Key: staff@123
+Security -> Layer2 -> Auth Key Mgmt (AKM) -> PSK -> Pre-Shared Key: Staff@123
 Apply to Device
 ```
 
