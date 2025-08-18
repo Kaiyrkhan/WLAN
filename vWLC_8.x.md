@@ -22,7 +22,7 @@ Enter Password for AP (6 to 127 characters): student@123
 
 Enter Enable Password for AP (6 to 127 characters): class@123
 
-Service Interface IP Address Configuration [statis][DHCP]: DHCP
+Service Interface IP Address Configuration [statis][DHCP]: DHCP            // Physical WLC үшін default Service interface IP адрес 192.168.1.1
 
 Management Interface IP Address: 10.0.128.251
 Management Interface Netmask: 255.255.255.0
