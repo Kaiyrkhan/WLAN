@@ -19,9 +19,9 @@ permit 192.168.150.0 0.0.0.255
 
 **SRV-D1 Switch**
 
-> VLAN 128 - WLC Management Interface  
+> VLAN 128 - WLC Management (MGMT) interface  
 > VLAN 120 - AP Join VLAN  
-> VLAN 130,150 - SSID (Client WLAN)	// әрқайсысына жеке VLAN  
+> VLAN 130,150 - SSID (Client WLAN) - әрқайсына жеке VLAN  
 
 ```shell
 vlan 128
@@ -167,9 +167,10 @@ show wlan summary
 ```
 
 **Configure vWLC using Web UI**
-
+```shell
 Browser -> https://10.0.128.2
 Browser -> https://public_ip_address:44128
+```
 
 ```shell
 1-қадам: Monitoring -> Wireless -> AP Statistics
