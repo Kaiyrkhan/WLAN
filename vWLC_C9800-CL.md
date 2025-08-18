@@ -130,4 +130,13 @@ Apply to Device
 ```shell
 ```
 
+## References
+1) [Cisco Catalyst 9800-CL Wireless Controller for Cloud Deployment Guide](https://www.cisco.com/c/en/us/td/docs/wireless/controller/9800/technical-reference/c9800-cl-dg.html)
+2) [Understand Catalyst 9800 Wireless Controllers Configuration Model](https://www.cisco.com/c/en/us/support/docs/wireless/catalyst-9800-series-wireless-controllers/213911-understand-catalyst-9800-wireless-contro.html)
+3) [Deploying and Configuring the Cisco Catalyst 9800-CL in VMware ESXi](https://www.wifireference.com/2019/08/24/cisco-catalyst-9800-cl-deployment-guide/)
 
+## YouTube
+1) [Install Cisco C9800-CL in VMWare ESXI 7 | Joining AP](https://youtu.be/mI6q8pkXKZI)
+2) [Install Cisco Wireless LAN Controller C9800-CL | Joining AP](https://youtu.be/ef4amrMiyaY)
+3) [Cisco 9800 VMware ESXi install](https://youtu.be/S4qYimtm2mQ)
+4) [Deploying the Cisco Catalyst 9800-CL in VMware ESXi](https://youtu.be/DqqjF2FH_Zw)
