@@ -73,4 +73,8 @@ Browser -> https://public_ip_address:25143/
 1) [Установка контроллера беспроводной сети Cisco vWLC 8.3](https://wiki.dno-it.ru/2023/12/04/ustanovka-cisco-vwlc-versii-8-3/)
 
 ## YouTube
+1) [Build Cisco Virtual Wireless LAN Controller VMware Workstation](https://youtu.be/YNB-sppMizU)
+2) [Cisco WLC Tutorial](https://www.youtube.com/playlist?list=PLj_J3RyzBOn6oFdJUCBVRSwTp-P9MdaHz)
+
+## YouTube
 1) [Cisco Access Point to Controller | AP Joining With vWLC](https://youtu.be/0xSkUGwonHk)
