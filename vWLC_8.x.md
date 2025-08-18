@@ -57,6 +57,10 @@ Configuration correct? If yes, system will save it and reset. [yes][NO]: yes
 User: admin
 Password: admin@123
 Cisco Controller> show interface summmary
+Cisco Controller> show ap summary
+Cisco Controller> show wlan summary
+
+Cisco Controller> save config
 
 Browser -> httрs://10.0.128.251
 Browser -> https://public_ip_address:25143/
