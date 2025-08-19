@@ -22,10 +22,21 @@ https://software.cisco.com/download/home
 | `180`   | staff-WiFi  | 192.168.180.0/24  | Wireless Network Clients        |
 | `190`   | guest-WiFi  | 192.168.190.0/24  | Wireless Network Clients        |
 
-> `VMs` – Virtual Machines  
-> `WLC` – Wireless LAN Controller  
-> `AP` – Access Point  
-> `MGMT` – Management  
+| VLAN ID | VLAN Name  | Network Address  | Device         | Description                     |
+|---------|------------|------------------|----------------|---------------------------------|
+| 10      | VMs        | 10.1.10.0/24     | SRV-D1, SRV-D2 | Virtual Machines (VMs)          |
+| 20      | ESXi       | 172.20.1.0/24    | SRV-D1, SRV-D2 | ESXi                            |
+| 30      | iDRAC      | 172.30.1.0/24    | SRV-D1, SRV-D2 | iDRAC/iLO Management interface  |
+| 40      | WLC        | 10.1.40.0/24     | SRV-D1, SRV-D2 | WLC Management interface        |
+| 45      | APs        | 10.1.45.0/24     | -              | AP (Access Point) Join VLAN     |
+| 50      | MGMT       | 10.1.1.116/30    | A1, A2         | Access Switch Management (MGMT) |
+| 60      | Voice      | 172.16.60.0/24   | D1, D2, A1, A2 | Voice VLAN                      |
+| 111     | VLAN111    | 172.16.111.0/24  | D1, D2, A1, A2 | Wired Network Clients           |
+| 112     | VLAN112    | 172.16.112.0/24  | D1, D2, A1, A2 | Wired Network Clients           |
+| 180     | staff-WiFi | 192.168.180.0/24 | SRV-D1, SRV-D2 | Wireless Network Clients        |
+| 190     | guest-WiFi | 192.168.190.0/24 | SRV-D1, SRV-D2 | Wireless Network Clients        |
+| 666     | Native     | -                | -              | Native VLAN                     |
+| 999     | unUsed     | -                | -              | unUsed VLAN                     |
 
 **EdgeRT1**
 ```shell
