@@ -8,6 +8,19 @@ https://software.cisco.com/download/home
 > **Download File: C9800-CL-universalk9.17.15.03.ova**  
 > Select a Product -> Browse all -> Wireless -> Wireless LAN Controller -> Standalone Controllers -> Catalyst 9800 Wireless Controllers for Cloud -> Catalyst 9800-CL Wireless Controller for Cloud -> IOS XE Software -> Cisco Catalyst 9800 Wireless Controller for Cloud - Hyper-V / ESXi / KVM -> download file: C9800-CL-universalk9.17.15.03.ova
 
+`VLAN 10` – VMs  
+`VLAN 20` – ESXi  
+`VLAN 30` – iDRAC / iLO  
+`VLAN 40` – WLC  
+`VLAN 45` – APs  
+`VLAN 50` – Access Switch MGMT  
+`VLAN 60` – Voice VLAN  
+`VLAN 111` – Wired Network Clients  
+`VLAN 112` – Wired Network Clients  
+`VLAN 180` – Wireless Network Clients  
+`VLAN 190` – Wireless Network Clients  
+
+
 **EdgeRT1**
 ```shell
 ip nat inside source list NAT interface GigabitEthernet0/0/0 overload
