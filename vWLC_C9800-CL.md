@@ -8,6 +8,10 @@ https://software.cisco.com/download/home
 > **Download File: C9800-CL-universalk9.17.15.03.ova**  
 > Select a Product -> Browse all -> Wireless -> Wireless LAN Controller -> Standalone Controllers -> Catalyst 9800 Wireless Controllers for Cloud -> Catalyst 9800-CL Wireless Controller for Cloud -> IOS XE Software -> Cisco Catalyst 9800 Wireless Controller for Cloud - Hyper-V / ESXi / KVM -> download file: C9800-CL-universalk9.17.15.03.ova  
 
+## 🖧 Network Topology
+
+![Topology](Topology/Branch_Network_Topology.png)
+
 **HeadQuarters (HQ) and Branch**
 
 | VLAN ID | VLAN Name  | Network Address  | Device         | Description                     |
@@ -21,8 +25,8 @@ https://software.cisco.com/download/home
 | 60      | Voice      | 172.16.60.0/24   | D1, D2, A1, A2 | Voice VLAN                      |
 | 111     | VLAN111    | 172.16.111.0/24  | D1, D2, A1, A2 | Wired Network Clients           |
 | 112     | VLAN112    | 172.16.112.0/24  | D1, D2, A1, A2 | Wired Network Clients           |
-| 180     | staff-WiFi | 192.168.180.0/24 | SRV-D1, SRV-D2 | Wireless Network Clients        |
-| 190     | guest-WiFi | 192.168.190.0/24 | SRV-D1, SRV-D2 | Wireless Network Clients        |
+| 180     | staff-WLAN | 192.168.180.0/24 | SRV-D1, SRV-D2 | Wireless Network Clients        |
+| 190     | guest-WLAN | 192.168.190.0/24 | SRV-D1, SRV-D2 | Wireless Network Clients        |
 | 777     | Native     | -                | -              | Native VLAN                     |
 | 999     | unUsed     | -                | -              | unUsed VLAN                     |
 
