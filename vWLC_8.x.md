@@ -227,7 +227,7 @@ Security -> Layer2 ->
 4-қадам: Save Configuration -> Successfully saved all configuration -> OK
 ```
 
-**Hardware_Configuration**
+**Hardware Configuration**  
 ![images](images/Hardware_Configuration.png)
 
 ## References
