@@ -39,7 +39,7 @@ permit 192.168.180.0 0.0.0.255
 permit 192.168.190.0 0.0.0.255
 ```
 
-**SRV-D1**
+**SRV-D1 (Distribution Switch)**
 ```shell
 vlan 40
 name vWLC
