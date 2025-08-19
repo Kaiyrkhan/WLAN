@@ -8,19 +8,7 @@ https://software.cisco.com/download/home
 > **Download File: C9800-CL-universalk9.17.15.03.ova**  
 > Select a Product -> Browse all -> Wireless -> Wireless LAN Controller -> Standalone Controllers -> Catalyst 9800 Wireless Controllers for Cloud -> Catalyst 9800-CL Wireless Controller for Cloud -> IOS XE Software -> Cisco Catalyst 9800 Wireless Controller for Cloud - Hyper-V / ESXi / KVM -> download file: C9800-CL-universalk9.17.15.03.ova  
 
-| VLAN ID | VLAN Name   | Network Address   | Description                     |
-|---------|-------------|-------------------|---------------------------------|
-| `10`    | VMs         | 10.1.10.0/24      | Virtual Machines (VMs)          |
-| `20`    | ESXi        | 172.20.1.0/24     | ESXi                            |
-| `30`    | iDRAC       | 172.30.1.0/24     | iDRAC/iLO Management interface  |
-| `40`    | WLC         | 10.1.40.0/24      | WLC Management interface        |
-| `45`    | APs         | 10.1.45.0/24      | Access Point (AP) Join VLAN     |
-| `50`    | MGMT        | 10.1.1.116/30     | Access Switch Management (MGMT) |
-| `60`    | Voice       | 172.16.60.0/24    | Voice VLAN                      |
-| `111`   | VLAN111     | 172.16.111.0/24   | Wired Network Clients           |
-| `112`   | VLAN112     | 172.16.112.0/24   | Wired Network Clients           |
-| `180`   | staff-WiFi  | 192.168.180.0/24  | Wireless Network Clients        |
-| `190`   | guest-WiFi  | 192.168.190.0/24  | Wireless Network Clients        |
+**HeadQuarters (HQ) and Branch**
 
 | VLAN ID | VLAN Name  | Network Address  | Device         | Description                     |
 |---------|------------|------------------|----------------|---------------------------------|
