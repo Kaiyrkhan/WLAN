@@ -98,6 +98,7 @@ Cisco Controller> save config
 > Alternative multicast address: 239.x.x.x, Мысалы: 239.0.1.1  
 
 **Configure vWLC using Web UI**
+
 ```shell
 Browser -> httрs://10.0.40.251
 Browser -> https://public_ip_address:25143
@@ -108,6 +109,17 @@ Browser -> https://public_ip_address:25143
                                          -> Interface Name: VLAN180
                                          -> VLAN Id: 180
                                          -> Apply
+
+Physical Information ->
+                     -> Port Number: 1
+Interface Address ->
+                  -> VLAN Identifier: 180
+                  -> IP Address: 192.168.180.2
+                  -> Netmask: 255.255.255.0
+                  -> Gateway: 192.168.180.1
+DHCP Information ->
+                 -> Primary DHCP Server: 10.0.40.1
+                 -> Apply
 ```
 
 ```shell
@@ -122,12 +134,6 @@ Security -> Layer2 ->
                    -> Security Type: Personal
                    -> PSK: Enabled
                    -> PSK Format -> ASCII -> Staff@123
-```
-
-```shell
-```
-
-```shell
 ```
 
 ```shell
