@@ -13,13 +13,26 @@ https://software.cisco.com/download/home
 `VLAN 30` – iDRAC / iLO  
 `VLAN 40` – WLC  
 `VLAN 45` – APs  
-`VLAN 50` – Access Switch MGMT  
+`VLAN 50` – Access Switch Management (MGMT)  
 `VLAN 60` – Voice VLAN  
 `VLAN 111` – Wired Network Clients  
 `VLAN 112` – Wired Network Clients  
 `VLAN 180` – Wireless Network Clients  
 `VLAN 190` – Wireless Network Clients  
 
+| VLAN ID | Description                     |
+|---------|---------------------------------|
+| `10`    | VMs                             |
+| `20`    | ESXi                            |
+| `30`    | iDRAC / iLO                     |
+| `40`    | WLC                             |
+| `45`    | APs                             |
+| `50`    | Access Switch Management (MGMT) |
+| `60`    | Voice VLAN                      |
+| `111`   | Wired Network Clients           |
+| `112`   | Wired Network Clients           |
+| `180`   | Wireless Network Clients        |
+| `190`   | Wireless Network Clients        |
 
 **EdgeRT1**
 ```shell
