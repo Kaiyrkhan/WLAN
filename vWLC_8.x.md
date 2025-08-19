@@ -228,7 +228,7 @@ Security -> Layer2 ->
 ```
 
 **Hardware Configuration**  
-![images](images/Hardware_Configuration.png)
+![images](images/Hardware_Configuration_WLC8x.png)
 
 ## References
 1) [Установка контроллера беспроводной сети Cisco vWLC 8.3](https://wiki.dno-it.ru/2023/12/04/ustanovka-cisco-vwlc-versii-8-3/)
