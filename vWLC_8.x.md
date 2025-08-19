@@ -8,6 +8,8 @@ https://software.cisco.com/download/home
 > **Download File: AIR_CTVM-K9_8_10_196_0.ova**  
 > Select a Product -> Browse all -> Wireless -> Wireless LAN Controller -> Standalone Controllers -> Virtual Wireless Controller -> Wireless LAN Controller Software -> Cisco Wireless LAN Small Scale Virtual Controller Installation with 60 day evaluation license -> download file: AIR_CTVM-K9_8_10_196_0.ova
 
+> Serial port 1 -> Backing: telnet://172.20.0.23:1723  
+
 ### 🖧 Network Topology
 
 ![Topology](Topology/Topology_EnterpriseNetworkDesign_HQ.png)
