@@ -94,7 +94,7 @@ Cisco Controller> show wlan summary
 Cisco Controller> save config
 
 Browser -> httрs://10.0.40.251
-Browser -> https://public_ip_address:25143/
+Browser -> https://public_ip_address:25143
 ```
 
 > Cisco default multicast address: 224.0.1.x, Мысалы: 224.0.1.40 (ұсынылады)  
