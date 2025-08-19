@@ -49,8 +49,6 @@ Service Interface IP Address Configuration [statis][DHCP]: DHCP      // Physical
 Service Interface IP Address: 192.168.1.1
 Service Interface Netmask: 255.255.255.0
 
-Enable Link Aggregation [LAG] [yes][no]: no
-
 Management Interface IP Address: 10.0.40.251
 Management Interface Netmask: 255.255.255.0
 Management Interface Default Router: 10.0.40.1
