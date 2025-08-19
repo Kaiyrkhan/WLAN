@@ -8,6 +8,9 @@ https://software.cisco.com/download/home
 > **Download File: AIR_CTVM-K9_8_10_196_0.ova**  
 > Select a Product -> Browse all -> Wireless -> Wireless LAN Controller -> Standalone Controllers -> Virtual Wireless Controller -> Wireless LAN Controller Software -> Cisco Wireless LAN Small Scale Virtual Controller Installation with 60 day evaluation license -> download file: AIR_CTVM-K9_8_10_196_0.ova
 
+**Hardware Configuration**  
+![images](images/Hardware_Configuration_WLC8x.png)
+
 ### 🖧 Network Topology
 
 ![Topology](Topology/Topology_EnterpriseNetworkDesign_HQ.png)
@@ -226,9 +229,6 @@ Security -> Layer2 ->
 ```shell
 4-қадам: Save Configuration -> Successfully saved all configuration -> OK
 ```
-
-**Hardware Configuration**  
-![images](images/Hardware_Configuration_WLC8x.png)
 
 ## References
 1) [Установка контроллера беспроводной сети Cisco vWLC 8.3](https://wiki.dno-it.ru/2023/12/04/ustanovka-cisco-vwlc-versii-8-3/)
