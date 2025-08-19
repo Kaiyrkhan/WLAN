@@ -60,7 +60,7 @@ Virtual Gateway IP Address: 192.0.2.1
 Multicast IP Address: 224.0.1.40
 Mobility/RF Group Name: default
 
-Network Name (SSID): staff-WiFi | student-WiFi | employee-WiFi | internal-WiFi | guest-WiFi 
+Network Name (SSID): staff-WiFi | internal-WiFi | employee-WiFi | guest-WiFi 
 Configure DHCP Bridging Mode [yes][NO]: no
 Allow Static IP Addresses [YES][no]: yes
 Configure a RADIUS Server now? [YES][no]: no
@@ -101,7 +101,36 @@ Cisco Controller> save config
 ```shell
 Browser -> httрs://10.0.40.251
 Browser -> https://public_ip_address:25143
+```
 
+```shell
+1-қадам: CONTROLLER -> Interfaces -> New ->
+                                         -> Interface Name: VLAN180
+                                         -> VLAN Id: 180
+                                         -> Apply
+```
+
+```shell
+2-қадам: WLANs -> WLAN ID 1 ->
+General ->
+        -> Profile Name: STAFF-WLAN
+        -> SSID: staff-WiFi
+        -> Status: Enabled
+        -> Interface/Interface Group(G): VLAN180
+Security -> Layer2 ->
+                   -> Layer 2 Security: WPA2+WPA3
+                   -> Security Type: Personal
+                   -> PSK: Enabled
+                   -> PSK Format -> ASCII -> Staff@123
+```
+
+```shell
+```
+
+```shell
+```
+
+```shell
 Save Configuration -> Successfully saved all configuration -> OK
 ```
 
