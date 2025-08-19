@@ -10,7 +10,7 @@ https://software.cisco.com/download/home
 
 ## 🖧 Network Topology
 
-![Topology](Topology/Branch_Network_Topology.png)
+![Topology](Topology/Topology_Enterprise Network Design_HQ.png)
 
 **HeadQuarters (HQ) and Branch**
 
