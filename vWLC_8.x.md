@@ -42,7 +42,7 @@ Enter Administrative Password (3 to 127 characters): admin@123
 Enter User Name for AP (24 characters max): student
 Enter Password for AP (6 to 127 characters): student@123
 
-Enter Enable Password for AP (6 to 127 characters): class@123
+Enter Enable Password for AP (6 to 127 characters): P@s$w0rd
 
 Service Interface IP Address Configuration [statis][DHCP]: DHCP      // Physical WLC 2504 үшін default Service interface IP адрес 192.168.1.1
 немесе
