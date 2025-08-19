@@ -227,6 +227,9 @@ Security -> Layer2 ->
 4-қадам: Save Configuration -> Successfully saved all configuration -> OK
 ```
 
+**Hardware_Configuration**
+![images](images/Hardware_Configuration.png)
+
 ## References
 1) [Установка контроллера беспроводной сети Cisco vWLC 8.3](https://wiki.dno-it.ru/2023/12/04/ustanovka-cisco-vwlc-versii-8-3/)
 
