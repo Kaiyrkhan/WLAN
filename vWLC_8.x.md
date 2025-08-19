@@ -34,7 +34,7 @@ https://software.cisco.com/download/home
 ```shell
 Would you like to terminate autoinstall? [yes]: yes
 
-System Name [Cisco_xx:xx:xx] (31 characters max): vWLC1
+System Name [Cisco_xx:xx:xx] (31 characters max): vWLC
 
 Enter Administrative User Name (24 characters max): admin
 Enter Administrative Password (3 to 127 characters): admin@123
