@@ -137,7 +137,13 @@ Security -> Layer2 ->
 ```
 
 ```shell
-Save Configuration -> Successfully saved all configuration -> OK
+3-қадам: CONTROLLER -> NTP -> Server ->
+                            -> New -> Server IPv4: 80.241.0.72 -> Apply
+                            -> NTP Polling Interval seconds: 86400 -> Apply
+```
+
+```shell
+4-қадам: Save Configuration -> Successfully saved all configuration -> OK
 ```
 
 ## References
