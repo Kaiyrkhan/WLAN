@@ -20,7 +20,7 @@ https://software.cisco.com/download/home
 | 20      | ESXi       | 172.20.1.0/24    | SRV-D1, SRV-D2 | ESXi                            |
 | 30      | iDRAC      | 172.30.1.0/24    | SRV-D1, SRV-D2 | iDRAC/iLO Management interface  |
 | 40      | WLC        | 10.1.40.0/24     | SRV-D1, SRV-D2 | WLC Management interface        |
-| 45      | APs        | 10.1.45.0/24     | -              | AP (Access Point) Join VLAN     |
+| 45      | APs        | 10.1.45.0/24     | SRV-D1, SRV-D2 | AP (Access Point) Join VLAN     |
 | 50      | MGMT       | 10.1.1.116/30    | A1, A2         | Access Switch Management (MGMT) |
 | 60      | Voice      | 172.16.60.0/24   | D1, D2, A1, A2 | Voice VLAN                      |
 | 111     | VLAN111    | 172.16.111.0/24  | D1, D2, A1, A2 | Wired Network Clients           |
@@ -40,76 +40,71 @@ permit 192.168.190.0 0.0.0.255
 ```
 
 **SRV-D1 Switch**
-
-> VLAN 40 - WLC Management (MGMT) interface  
-> VLAN 45 - AP Join VLAN  
-> VLAN 130,150 - SSID (Client WLAN) - әрқайсына жеке VLAN  
-
 ```shell
-vlan 128
+vlan 40
 name vWLC
-vlan 120
+vlan 45
 name APs
 
-vlan 130
+vlan 180
 name staff-WLAN
-vlan 150
+vlan 190
 name guest-WLAN
 
-int vlan 128
-ip address 10.0.128.1 255.255.255.0
+int vlan 40
+ip address 10.0.40.1 255.255.255.0
 no shutdown
-int vlan 120
-ip address 10.0.120.1 255.255.255.0
+int vlan 45
+ip address 10.0.45.1 255.255.255.0
 no shutdown
 
-int vlan 130
-ip address 192.168.130.1 255.255.255.0
+int vlan 180
+ip address 192.168.180.1 255.255.255.0
 no shutdown
-int vlan 150
-ip address 192.168.150.1 255.255.255.0
+int vlan 190
+ip address 192.168.190.1 255.255.255.0
 no shutdown
 
 router ospf 1
-network 10.0.128.0 0.0.0.255 area 0
-network 10.0.120.0 0.0.0.255 area 0
-network 192.168.130.0 0.0.0.255 area 0
-network 192.168.150.0 0.0.0.255 area 0
+network 10.0.40.0 0.0.0.255 area 0
+network 10.0.45.0 0.0.0.255 area 0
+network 192.168.180.0 0.0.0.255 area 0
+network 192.168.190.0 0.0.0.255 area 0
 
 int range Gi1/0/21-22
 description "Connetcted to APs"
 switchport mode access
-switchport access vlan 120
+switchport access vlan 45
 
 ip dhcp pool APs
-network 10.0.120.0 255.255.255.0
-default-router 10.0.120.1
+network 10.0.45.0 255.255.255.0
+default-router 10.0.45.1
 dns-server 8.8.8.8
 domain-name edu.local
 lease 7
 
-ip dhcp excluded-address 10.0.120.1 10.0.120.10
-ip dhcp excluded-address 10.0.120.251 10.0.120.254
+ip dhcp excluded-address 10.0.45.1 10.0.45.100
+ip dhcp excluded-address 10.0.45.200 10.0.45.254
 
 ip dhcp pool staff-WLAN
-network 192.168.130.0 255.255.255.0
-default-router 192.168.130.1
+network 192.168.180.0 255.255.255.0
+default-router 192.168.180.1
 dns-server 8.8.8.8
 domain-name edu.local
 lease 7
 
-ip dhcp excluded-address 192.168.130.1 192.168.130.10
-ip dhcp excluded-address 192.168.130.251 192.168.130.254
+ip dhcp excluded-address 192.168.180.1 192.168.180.10
+ip dhcp excluded-address 192.168.180.251 192.168.180.254
 
 ip dhcp pool guest-WLAN
-network 192.168.150.0 255.255.255.0
-default-router 192.168.150.1
+network 192.168.190.0 255.255.255.0
+default-router 192.168.190.1
 dns-server 8.8.8.8
 domain-name edu.local
 lease 7
 
-ip dhcp excluded-address 192.168.150.1 192.168.150.10
-ip dhcp excluded-address 192.168.150.251 192.168.150.254
+ip dhcp excluded-address 192.168.190.1 192.168.190.10
+ip dhcp excluded-address 192.168.190.251 192.168.190.254
 
 show ip dhcp pool
 show ip dhcp binding
@@ -119,40 +114,40 @@ show ip dhcp server statistics
 **Configure vWLC using CLI**
 
 ```shell
-vlan 128
+vlan 40
 name MGMT
-vlan 120
+vlan 45
 name APs
 
-vlan 130
+vlan 180
 name staff-WLAN
-vlan 150
+vlan 190
 name guest-WLAN
 
-int vlan 128
-ip address 10.0.128.2 255.255.255.0
+int vlan 40
+ip address 10.0.40.2 255.255.255.0
 no shutdown
-int vlan 120
-ip address 10.0.120.2 255.255.255.0
-no shutdown
-
-int vlan 130
-ip address 192.168.130.2 255.255.255.0
-no shutdown
-int vlan 150
-ip address 192.168.150.2 255.255.255.0
+int vlan 45
+ip address 10.0.45.2 255.255.255.0
 no shutdown
 
-ping 10.0.128.1
-ping 10.0.120.1
-ping 192.168.130.1
-ping 192.168.150.1
+int vlan 180
+ip address 192.168.180.2 255.255.255.0
+no shutdown
+int vlan 190
+ip address 192.168.190.2 255.255.255.0
+no shutdown
+
+ping 10.0.40.1
+ping 10.0.45.1
+ping 192.168.180.1
+ping 192.168.190.1
 
 // Configure the Administrator User
 username student privilege 15 secret class@123
 
 // Configure the Wireless Management interface and Allow Management via Wireless 
-wireless managemet interface vlan 128
+wireless managemet interface vlan 40
 exit
 wireless mgmt-via-wireless
 
@@ -170,7 +165,7 @@ no ap dot11 24ghz shutdown
 no ap dot11 6ghz shutdown
 
 // Configure the WLC to sync time with an NTP server
-ip route 0.0.0.0 0.0.0.0 10.0.128.1
+ip route 0.0.0.0 0.0.0.0 10.0.40.1
 ping ntp.nic.kz
 ping 80.241.0.72
 ntp server 80.241.0.72
@@ -190,8 +185,8 @@ show wlan summary
 
 **Configure vWLC using Web UI**
 ```shell
-Browser -> https://10.0.128.2
-Browser -> https://public_ip_address:44128
+Browser -> https://10.0.40.2
+Browser -> https://public_ip_address:40443
 ```
 
 ```shell
