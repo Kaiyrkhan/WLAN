@@ -8,6 +8,28 @@ https://software.cisco.com/download/home
 > **Download File: AIR_CTVM-K9_8_10_196_0.ova**  
 > Select a Product -> Browse all -> Wireless -> Wireless LAN Controller -> Standalone Controllers -> Virtual Wireless Controller -> Wireless LAN Controller Software -> Cisco Wireless LAN Small Scale Virtual Controller Installation with 60 day evaluation license -> download file: AIR_CTVM-K9_8_10_196_0.ova
 
+### 🖧 Network Topology
+
+![Topology](Topology/Topology_EnterpriseNetworkDesign_HQ.png)
+
+**HeadQuarters (HQ)**
+
+| VLAN ID | VLAN Name  | Network Address  | Device         | Description                     |
+|---------|------------|------------------|----------------|---------------------------------|
+| 10      | VMs        | 10.1.10.0/24     | SRV-D1, SRV-D2 | Virtual Machines (VMs)          |
+| 20      | ESXi       | 172.20.1.0/24    | SRV-D1, SRV-D2 | ESXi                            |
+| 30      | iDRAC      | 172.30.1.0/24    | SRV-D1, SRV-D2 | iDRAC/iLO Management interface  |
+| 40      | WLC        | 10.1.40.0/24     | SRV-D1, SRV-D2 | WLC Management interface        |
+| 45      | APs        | 10.1.45.0/24     | SRV-D1, SRV-D2 | AP (Access Point) Join VLAN     |
+| 50      | MGMT       | 10.1.1.116/30    | A1, A2         | Access Switch Management (MGMT) |
+| 60      | Voice      | 172.16.60.0/24   | D1, D2, A1, A2 | Voice VLAN                      |
+| 111     | VLAN111    | 172.16.111.0/24  | D1, D2, A1, A2 | Wired Network Clients           |
+| 112     | VLAN112    | 172.16.112.0/24  | D1, D2, A1, A2 | Wired Network Clients           |
+| 180     | staff-WLAN | 192.168.180.0/24 | SRV-D1, SRV-D2 | Wireless Network Clients        |
+| 190     | guest-WLAN | 192.168.190.0/24 | SRV-D1, SRV-D2 | Wireless Network Clients        |
+| 777     | Native     | -                | -              | Native VLAN                     |
+| 999     | unUsed     | -                | -              | unUsed VLAN                     |
+
 **Configure vWLC using CLI**
 ```shell
 Would you like to terminate autoinstall? [yes]: yes
@@ -27,17 +49,20 @@ Service Interface IP Address Configuration [statis][DHCP]: DHCP      // Physical
 Service Interface IP Address: 192.168.1.1
 Service Interface Netmask: 255.255.255.0
 
-Management Interface IP Address: 10.0.128.251
+Enable Link Aggregation [LAG] [yes][no]: no
+
+Management Interface IP Address: 10.0.40.251
 Management Interface Netmask: 255.255.255.0
-Management Interface Default Router: 10.0.128.1
-Management Interface VLAN Identifier (0 = untagged): 128
+Management Interface Default Router: 10.0.40.1
+Management Interface VLAN Identifier (0 = untagged): 40
 Management Interface Port Num [1]: 1
-Management Interface DHCP Server IP Address: 10.0.128.1
+Management Interface DHCP Server IP Address: 10.0.40.1
 
 Virtual Gateway IP Address: 192.0.2.1
+Multicast IP Address: 224.0.1.40
 Mobility/RF Group Name: default
 
-Network Name (SSID): staff-WiFi | student-WiFi | employee-WiFi | guest-WiFi
+Network Name (SSID): staff-WiFi | student-WiFi | employee-WiFi | internal-WiFi | guest-WiFi 
 Configure DHCP Bridging Mode [yes][NO]: no
 Allow Static IP Addresses [YES][no]: yes
 Configure a RADIUS Server now? [YES][no]: no
@@ -52,6 +77,10 @@ Enable Auto-RF [YES][no]: yes
 Configure a NTP server now? [YES][no]: yes
 Enter the NTP server's IP address: 80.241.0.72
 Enter a polling interval between 3600 and 604800 secs: 86400
+немесе
+Configure the system time now? [yes][no]: yes
+Enter the date in MM/DD/YY format: 08/19/2025
+Enter the time in HH:MM:SS format: 08:30:00
 
 Would you like to configure IPv6 parameters [YES][no]: no
 
@@ -59,15 +88,19 @@ Configuration correct? If yes, system will save it and reset. [yes][NO]: yes
 
 User: admin
 Password: admin@123
+
 Cisco Controller> show interface summmary
 Cisco Controller> show ap summary
 Cisco Controller> show wlan summary
 
 Cisco Controller> save config
 
-Browser -> httрs://10.0.128.251
+Browser -> httрs://10.0.40.251
 Browser -> https://public_ip_address:25143/
 ```
+
+> Cisco default multicast address: 224.0.1.x, Мысалы: 224.0.1.40 (ұсынылады)  
+> Alternative multicast address: 239.x.x.x, Мысалы: 239.0.1.1  
 
 ## References
 1) [Установка контроллера беспроводной сети Cisco vWLC 8.3](https://wiki.dno-it.ru/2023/12/04/ustanovka-cisco-vwlc-versii-8-3/)
