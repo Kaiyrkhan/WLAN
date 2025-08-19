@@ -39,7 +39,7 @@ permit 192.168.180.0 0.0.0.255
 permit 192.168.190.0 0.0.0.255
 ```
 
-**SRV-D1 Switch**
+**SRV-D1**
 ```shell
 vlan 40
 name vWLC
@@ -176,7 +176,8 @@ SRV-D1# wireless config vwlc-ssc key-size 2048 signature-algo sha256 password 0 
 show wireless management trustpoint
 
 copy run start
-
+```
+```shell
 show wireless stats ap join summary
 show ap tag summary
 show ap uptime
@@ -200,10 +201,10 @@ Browser -> https://public_ip_address:40443
 ```shell
 3-қадам: Configuration -> Tags & Profiles -> WLANs -> Add ->
 General ->
-- Profile Name: STAFF_WLAN
-- SSID: staff-WiFi
-- Status: Enabled
-- 6 GHz Status: Disabled
+        -> Profile Name: STAFF_WLAN
+        -> SSID: staff-WiFi
+        -> Status: Enabled
+        -> 6 GHz Status: Disabled
 
 Security -> Layer2 -> Auth Key Mgmt (AKM) -> PSK -> Pre-Shared Key: Staff@123
 Apply to Device
@@ -211,27 +212,81 @@ Apply to Device
 
 ```shell
 4-қадам: Configuration -> Tags & Profiles -> Policy -> Add -> 
-
 General ->
-- Name: POLICY_PROFILE_STAFF
-- Description: POLICY PROFILE STAFF
-- Status: Enabled
+        -> Name: POLICY_PROFILE_STAFF
+        -> Description: POLICY PROFILE STAFF
+        -> Status: Enabled
 
 Access Policies -> VLAN/VLAN Group: staff-WiFi
 Apply to Device
 ```
 
 ```shell
-5-қадам: 
+5-қадам: Configuration -> Tags & Profiles -> Tags -> Policy -> Add ->
+        -> Name: POLICY_TAG_STAFF
+        -> Description: POLICY TAG STAFF
+        -> WLAN-POLICY Maps: -> Add -> WLAN Profile: WLAN_STAFF
+        -> WLAN-POLICY Maps: -> Add -> Policy Profile: POLICY_PROFILE_STAFF
+Apply to Device
 ```
 
 ```shell
-6-қадам: 
+6-қадам: Configuration -> Tags & Profiles -> AP Join -> Add ->
+General ->
+        -> Name: AP_PROFILE_STAFF
+        -> Description: AP PROFILE STAFF
+        -> Country Code: KZ
+        -> Time Zone: Use-Controller
+        -> NTP Server: 80.241.0.72
+Apply to Device
 ```
 
 ```shell
+7-қадам: Configuration -> Tags & Profiles -> Tags -> Site -> Add ->
+        -> Name: SITE_TAG_STAFF
+        -> Description: SITE TAG STAFF
+        -> AP Join Profile: AP_PROFILE_STAFF
+Apply to Devic
 ```
 ```shell
+8-қадам: Configuration -> Tags & Profiles -> RF/Radio -> RF -> Add ->
+General ->
+        -> Name: RF_PROFILE_STAFF_2.4GHz
+        -> Radio Band: 2.4 GHz Band
+        -> Status: Enabled
+        -> Description: RF PROFILE STAFF 2.4GHz
+Apply to Device
+
+General ->
+        -> Name: RF_PROFILE_STAFF_5GHz
+        -> Radio Band: 5 GHz Band
+        -> Status: Enabled
+        -> Description: RF PROFILE STAFF 5GHz
+Apply to Device
+```
+
+```shell
+9-қадам: Configuration -> Tags & Profiles -> Tags -> RF -> Add ->
+        -> Name: RF_TAG_STAFF
+        -> Description: RF TAG STAFF
+        -> 5 GHz Band RF Profile: RF_PROFILE_STAFF_5GHz
+        -> 2.4 GHz Band RF Profile: RF_PROFILE_STAFF_2.4GHz
+Apply to Device
+```
+
+```shell
+10-қадам: Configuration -> Wireless -> Access Points
+
+Тізімде көрсетілген Access Point-тың үстінен тінтуірмен басамыз!
+Мысалы: AIR-CAP2702E-E-K9 
+
+General -> Tags ->
+                -> Policy: POLICY_TAG_STAFF
+                -> Site: SITE_TAG_STAFF
+                -> RF: RF_TAG_STAFF
+Update & Apply to Device
+
+AP Operational Configuration Viewer
 ```
 
 ## References
