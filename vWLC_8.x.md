@@ -92,13 +92,18 @@ Cisco Controller> show ap summary
 Cisco Controller> show wlan summary
 
 Cisco Controller> save config
-
-Browser -> httрs://10.0.40.251
-Browser -> https://public_ip_address:25143
 ```
 
 > Cisco default multicast address: 224.0.1.x, Мысалы: 224.0.1.40 (ұсынылады)  
 > Alternative multicast address: 239.x.x.x, Мысалы: 239.0.1.1  
+
+**Configure vWLC using Web UI**
+```shell
+Browser -> httрs://10.0.40.251
+Browser -> https://public_ip_address:25143
+
+Save Configuration -> Successfully saved all configuration -> OK
+```
 
 ## References
 1) [Установка контроллера беспроводной сети Cisco vWLC 8.3](https://wiki.dno-it.ru/2023/12/04/ustanovka-cisco-vwlc-versii-8-3/)
