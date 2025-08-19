@@ -23,7 +23,7 @@ https://software.cisco.com/download/home
 | 112     | VLAN112    | 172.16.112.0/24  | D1, D2, A1, A2 | Wired Network Clients           |
 | 180     | staff-WiFi | 192.168.180.0/24 | SRV-D1, SRV-D2 | Wireless Network Clients        |
 | 190     | guest-WiFi | 192.168.190.0/24 | SRV-D1, SRV-D2 | Wireless Network Clients        |
-| 666     | Native     | -                | -              | Native VLAN                     |
+| 777     | Native     | -                | -              | Native VLAN                     |
 | 999     | unUsed     | -                | -              | unUsed VLAN                     |
 
 **EdgeRT1**
