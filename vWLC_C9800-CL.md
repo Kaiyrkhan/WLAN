@@ -8,6 +8,8 @@ https://software.cisco.com/download/home
 > **Download File: C9800-CL-universalk9.17.15.03.ova**  
 > Select a Product -> Browse all -> Wireless -> Wireless LAN Controller -> Standalone Controllers -> Catalyst 9800 Wireless Controllers for Cloud -> Catalyst 9800-CL Wireless Controller for Cloud -> IOS XE Software -> Cisco Catalyst 9800 Wireless Controller for Cloud - Hyper-V / ESXi / KVM -> download file: C9800-CL-universalk9.17.15.03.ova  
 
+> Serial port 1 -> Backing: telnet://172.20.0.23:1723  
+
 ### 🖧 Network Topology
 
 ![Topology](Topology/Topology_EnterpriseNetworkDesign_HQ.png)
