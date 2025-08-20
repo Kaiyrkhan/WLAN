@@ -297,7 +297,7 @@ AP Operational Configuration Viewer
 Serial Port ->
             -> Serial Port 1: Use Network
             -> Direction: Server
-            -> Port URI: telnet://172.20.0.23:1723
+            -> Port URI: telnet://172.20.0.23:2323
 ```
 
 ## References
