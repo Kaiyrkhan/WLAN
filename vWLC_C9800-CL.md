@@ -26,7 +26,7 @@ https://software.cisco.com/download/home
 | 40      | WLC        | 10.1.40.0/24     | SRV-D1, SRV-D2 | WLC Management interface        |
 | 43      | APs        | 10.1.45.0/24     | SRV-D1, SRV-D2 | AP (Access Point) Join VLAN     |
 | 60      | Voice      | 172.16.60.0/24   | D1, D2, A1, A2 | Voice VLAN                      |
-| 70      | MGMT       | 10.1.70.0/24     | A1, A2         | Access Switch Management (MGMT) |
+| 7       | MGMT       | 10.1.7.0/24      | A1, A2         | Access Switch Management (MGMT) |
 | 111     | VLAN111    | 172.16.111.0/24  | D1, D2, A1, A2 | Wired Network Clients           |
 | 112     | VLAN112    | 172.16.112.0/24  | D1, D2, A1, A2 | Wired Network Clients           |
 | 180     | staff-WLAN | 192.168.180.0/24 | SRV-D1, SRV-D2 | Wireless Network Clients        |
