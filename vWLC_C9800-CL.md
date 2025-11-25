@@ -47,7 +47,7 @@ permit 192.168.190.0 0.0.0.255
 ```shell
 vlan 40
 name vWLC
-vlan 45
+vlan 43
 name APs
 
 vlan 180
@@ -58,8 +58,8 @@ name guest-WLAN
 int vlan 40
 ip address 10.0.40.1 255.255.255.0
 no shutdown
-int vlan 45
-ip address 10.0.45.1 255.255.255.0
+int vlan 43
+ip address 10.0.43.1 255.255.255.0
 no shutdown
 
 int vlan 180
@@ -71,24 +71,24 @@ no shutdown
 
 router ospf 1
 network 10.0.40.0 0.0.0.255 area 0
-network 10.0.45.0 0.0.0.255 area 0
+network 10.0.43.0 0.0.0.255 area 0
 network 192.168.180.0 0.0.0.255 area 0
 network 192.168.190.0 0.0.0.255 area 0
 
 int range Gi1/0/21-22
 description "Connetcted to APs"
 switchport mode access
-switchport access vlan 45
+switchport access vlan 43
 
 ip dhcp pool APs
-network 10.0.45.0 255.255.255.0
-default-router 10.0.45.1
+network 10.0.43.0 255.255.255.0
+default-router 10.0.43.1
 dns-server 8.8.8.8
 domain-name edu.local
 lease 7
 
-ip dhcp excluded-address 10.0.45.1 10.0.45.100
-ip dhcp excluded-address 10.0.45.200 10.0.45.254
+ip dhcp excluded-address 10.0.43.1 10.0.43.100
+ip dhcp excluded-address 10.0.43.200 10.0.43.254
 
 ip dhcp pool staff-WLAN
 network 192.168.180.0 255.255.255.0
@@ -120,7 +120,7 @@ show ip dhcp server statistics
 ```shell
 vlan 40
 name MGMT
-vlan 45
+vlan 43
 name APs
 
 vlan 180
@@ -131,8 +131,8 @@ name guest-WLAN
 int vlan 40
 ip address 10.0.40.2 255.255.255.0
 no shutdown
-int vlan 45
-ip address 10.0.45.2 255.255.255.0
+int vlan 43
+ip address 10.0.43.2 255.255.255.0
 no shutdown
 
 int vlan 180
@@ -143,7 +143,7 @@ ip address 192.168.190.2 255.255.255.0
 no shutdown
 
 ping 10.0.40.1
-ping 10.0.45.1
+ping 10.0.43.1
 ping 192.168.180.1
 ping 192.168.190.1
 
